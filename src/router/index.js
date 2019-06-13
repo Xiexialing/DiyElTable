@@ -1,15 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import List from '@/views/list'
+import Tabs from '@/views/tabs'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/list',
+      name: 'List',
+      component: List
+    },
+    {
+      path: '/tabs',
+      name: 'Tabs',
+      component: Tabs
+    },
+    {
+      path: '*',
+      redirect: '/list'
     }
   ]
 })
